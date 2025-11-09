@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 
 #step one
 #Chrome driver service Selenium 160->160 chrome driver
-# service_obj = Service("C:\Users\Hp\AppData\Local\Temp\chromedriver-win64\chromedriver-win64.exe")
+service_obj = Service("C:\Users\Hp\AppData\Local\Temp\chromedriver-win64\chromedriver-win64.exe")
 # driver = webdriver.chrome(service=service_obj)
 
 
