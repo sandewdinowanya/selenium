@@ -30,4 +30,4 @@ assert 'success' in message
 
 driver.find_element(By.XPATH,'(//input[@type="text"])[3]').send_keys("helloworld")
 
-time.sleep(5000)
+time.sleep(500)
