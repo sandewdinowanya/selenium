@@ -22,11 +22,12 @@ driver.find_element(By.ID,"exampleCheck1").click()
             # .classname
 
 
-driver.find_element(By.CSS_SELECTOR, "inlineRadio1").click()
+driver.find_element(By.CSS_SELECTOR, '#inlineRadio1').click()
 driver.find_element(By.XPATH,"//input[@type='submit']").click()
 message = driver.find_element(By.CLASS_NAME,"alert-success").text
-print(message) 
-
+print(message)
 assert 'success' in message
 
-time.sleep(500)
+driver.find_element(By.XPATH,'(//input[@type="text"])[3]').send_keys("helloworld")
+
+time.sleep(5000)
