@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 driver = webdriver.Chrome()
 
@@ -22,6 +23,10 @@ driver.find_element(By.ID,"exampleCheck1").click()
             # .classname
 
 
+dropdown = Select(driver.find_element(By.ID, "exampleFormControlSelect1"))
+dropdown.select_by_index(1)  #female
+dropdown.select_by_index(0)  #male
+dropdown.select_by_visible_text("Female")
 driver.find_element(By.CSS_SELECTOR, '#inlineRadio1').click()
 driver.find_element(By.XPATH,"//input[@type='submit']").click()
 message = driver.find_element(By.CLASS_NAME,"alert-success").text
