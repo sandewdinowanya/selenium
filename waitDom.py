@@ -29,15 +29,6 @@ assert success_msg == "Code applied ..!"
 print(success_msg)
 driver.find_element(By.XPATH,"//button[text()='Place Order']").click()
 
-
-
-
-
-
-
-
-
-
 time.sleep(3)
 
 
