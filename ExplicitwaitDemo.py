@@ -11,15 +11,15 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 driver = webdriver.Chrome()
 
-driver.implicitly_wait(5)
+driver.implicitly_wait(2)
 
 driver.get("https://rahulshettyacademy.com/seleniumPractise/#")
 
 driver.find_element(By.XPATH,"//input[@type='search']").send_keys("ber")
 
-time.sleep(2)
+time.sleep(4)
 # results = driver.find_element(By.CSS_SELECTOR,"div[ class='.products'] div")
-results = driver.find_elements(By.XPATH,"//div[@class='products']/div")
+results = driver.find_elements(By.XPATH,"//div[@class='products']/div") #list[]
 count = len(results)
 assert count > 0
 for result in results:
