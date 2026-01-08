@@ -19,4 +19,8 @@ for product in products:
         product.find_element(By.XPATH,"div/button").click()
 
 driver.find_element(By.CSS_SELECTOR, "a[class*='btn-primary']").click()
+driver.find_element(By.XPATH," //button[@class='btn btn-success']").click()
+driver.find_element(By.ID,"country").send_keys("ind")
+
+
 print("Success")
