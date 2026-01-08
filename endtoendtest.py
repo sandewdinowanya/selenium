@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 #chrome driver
 driver = webdriver.Chrome()
@@ -21,6 +23,9 @@ for product in products:
 driver.find_element(By.CSS_SELECTOR, "a[class*='btn-primary']").click()
 driver.find_element(By.XPATH," //button[@class='btn btn-success']").click()
 driver.find_element(By.ID,"country").send_keys("ind")
+wait = WebDriverWait(driver,10)
+wait.until(expected_conditions.presence_of_element_located(By.LINK_TEXT, "India"))
+driver.find_element(By.LINK_TEXT, "India").click()
 
 
 print("Success")
